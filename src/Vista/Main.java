@@ -7,7 +7,7 @@ package Vista;
 
 /**
  *
- * @author edwin
+ * @author edwin, diego
  */
 public class Main {
     public static void main(String[] args){
