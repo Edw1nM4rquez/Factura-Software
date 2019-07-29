@@ -74,12 +74,12 @@ public class Facturacion extends JFrame implements ActionListener {
     gb =new GridBagConstraints();
     gb.gridx=0;
     gb.gridy=3;
-    registro.add(new JLabel("R.u.c:0302127022001 "), gb);
+    registro.add(new JLabel("R.u.c:0302127022747001 "), gb);
     
     gb =new GridBagConstraints();
     gb.gridx=0;
     gb.gridy=4;
-    registro.add(new JLabel("Aut.SRI.: 1123368257"), gb);
+    registro.add(new JLabel("Aut.SRI.: 11233682564568677857"), gb);
     
     gb =new GridBagConstraints();
     gb.gridx=0;
