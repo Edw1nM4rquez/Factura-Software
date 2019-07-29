@@ -22,6 +22,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
@@ -30,11 +31,15 @@ import javax.swing.JTextField;
  */
 public class Inicio extends JFrame implements ActionListener{
 private JTextField txtNombre;
-private JTextField txtContrasenia;
+//private JTextField txtContrasenia;
 private String phat ="E:\\Cuentas libreria\\images.jpg";
 private int bandera=0 ;
 ImageIcon Img;
-    public Inicio(){
+private String txtContraseña;
+  JPasswordField password1 ;
+  private boolean banderaOp;
+  
+public Inicio(){
     initcomponents();
 }
 public void initcomponents(){
@@ -75,8 +80,8 @@ this.setTitle("Libreria Marquez");
   gb=new GridBagConstraints();
   gb.gridx = 1;
   gb.gridy = 3;
-  txtContrasenia=new JTextField(10);
-  registro.add(txtContrasenia, gb);
+  password1=new JPasswordField(10);
+  registro.add(password1, gb);
 
   gb =new GridBagConstraints();
   gb.gridx=0;
@@ -120,7 +125,8 @@ this.setTitle("Libreria Marquez");
         String comando = e.getActionCommand();
 		switch (comando){
                     case "btnint":
-                          if(txtNombre.getText().equals("admin") && txtContrasenia.getText().equals("admin"))
+                        regresarContra();
+                          if(txtNombre.getText().equals("admin") && txtContraseña.equals("admin"))
                           {
                            Facturacion f=new Facturacion();
                         f.setVisible(true);
@@ -133,5 +139,10 @@ this.setTitle("Libreria Marquez");
                 }
                 
     }
-    
+    private void regresarContra(){
+        	char [] input = password1.getPassword();
+		 txtContraseña = String.valueOf(input);
+                 System.out.println("Contra"+txtContraseña);
+        }
+
 }
