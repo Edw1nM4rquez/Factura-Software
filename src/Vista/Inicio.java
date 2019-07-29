@@ -133,7 +133,7 @@ this.setTitle("Libreria Marquez");
                         this.setVisible(false);     
                           }else{
                          JOptionPane.showMessageDialog(null,"Usuario incorrecto") ;
-                         txtNombre.setText(" ");
+                         password1.setText(" ");
                           }              
                         break;
                 }
