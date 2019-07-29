@@ -120,12 +120,15 @@ this.setTitle("Libreria Marquez");
         String comando = e.getActionCommand();
 		switch (comando){
                     case "btnint":
-                              
-                        Facturacion f=new Facturacion();
+                          if(txtNombre.getText().equals("admin") && txtContrasenia.getText().equals("admin"))
+                          {
+                           Facturacion f=new Facturacion();
                         f.setVisible(true);
-                        this.setVisible(false);   
-                       JOptionPane.showMessageDialog(null,"Usuario incorrecto") ;
-                                              
+                        this.setVisible(false);     
+                          }else{
+                         JOptionPane.showMessageDialog(null,"Usuario incorrecto") ;
+                         txtNombre.setText(" ");
+                          }              
                         break;
                 }
                 
